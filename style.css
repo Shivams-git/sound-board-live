@@ -16,6 +16,42 @@ body {
     position: relative;
 }
 
+/* Global dark background with blue-violet gradient */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background:
+        radial-gradient(circle at 20% 80%, #8b5cf6 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, #ec48d1 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, #3bf6ab 0%, transparent 50%),
+        linear-gradient(135deg, #000000 0%, #1e293b 50%, #020617 100%);
+    color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Global dark background with blue-violet gradient */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background:
+        radial-gradient(circle at 20% 80%, #8b5cf6 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, #ec48d1 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, #3bf6ab 0%, transparent 50%),
+        linear-gradient(135deg, #000000 0%, #1e293b 50%, #020617 100%);
+    color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
 body::before {
     content: '';
     position: fixed;
@@ -24,38 +60,53 @@ body::before {
     width: 100%;
     height: 100%;
     background-image:
-        radial-gradient(2px 2px at 20px 30px, #eee, transparent),
-        radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.8), transparent),
-        radial-gradient(1px 1px at 90px 40px, #fff, transparent),
-        radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.6), transparent),
-        radial-gradient(2px 2px at 160px 30px, #fff, transparent),
-        radial-gradient(1px 1px at 200px 120px, rgba(255, 255, 255, 0.8), transparent),
-        radial-gradient(2px 2px at 240px 10px, #eee, transparent),
-        radial-gradient(1px 1px at 300px 90px, #fff, transparent),
-        radial-gradient(1px 1px at 350px 40px, rgba(255, 255, 255, 0.7), transparent),
-        radial-gradient(2px 2px at 380px 110px, #fff, transparent),
-        radial-gradient(1px 1px at 420px 50px, rgba(255, 255, 255, 0.6), transparent),
-        radial-gradient(2px 2px at 460px 90px, #eee, transparent),
-        radial-gradient(1px 1px at 500px 20px, #fff, transparent);
+        radial-gradient(5px 5px at 20px 30px, #fff, transparent),
+        radial-gradient(4px 4px at 40px 70px, rgba(255, 255, 255, 0.95), transparent),
+        radial-gradient(3px 3px at 90px 40px, #fff, transparent),
+        radial-gradient(3px 3px at 130px 80px, rgba(255, 255, 255, 0.92), transparent),
+        radial-gradient(5px 5px at 160px 30px, #fff, transparent),
+        radial-gradient(3px 3px at 200px 120px, rgba(255, 255, 255, 0.95), transparent),
+        radial-gradient(4px 4px at 240px 10px, #fff, transparent),
+        radial-gradient(3px 3px at 300px 90px, #fff, transparent),
+        radial-gradient(3px 3px at 350px 40px, rgba(255, 255, 255, 0.93), transparent),
+        radial-gradient(4px 4px at 380px 110px, #fff, transparent),
+        radial-gradient(3px 3px at 420px 50px, rgba(255, 255, 255, 0.92), transparent),
+        radial-gradient(5px 5px at 460px 90px, #fff, transparent),
+        radial-gradient(3px 3px at 500px 20px, #fff, transparent),
+
+        /* More stars of different sizes and positions */
+        radial-gradient(2px 2px at 60px 20px, #fff, transparent),
+        radial-gradient(6px 6px at 180px 150px, rgba(255, 255, 255, 0.9), transparent),
+        radial-gradient(3px 3px at 270px 70px, #eee, transparent),
+        radial-gradient(4px 4px at 430px 130px, rgba(255, 255, 255, 0.85), transparent),
+        radial-gradient(2.5px 2.5px at 520px 40px, #fff, transparent),
+        radial-gradient(3px 3px at 580px 100px, #fff, transparent);
     background-repeat: repeat;
     background-size: 600px 200px;
-    animation: twinkle 20s ease-in-out infinite;
+    animation: twinkle 3s ease-in-out infinite alternate;
     pointer-events: none;
     z-index: 0;
 }
 
 @keyframes twinkle {
-
-    0%,
-    90%,
-    100% {
-        opacity: 1;
+    0% {
+        opacity: 0.6;
+        transform: scale(0.3);
     }
 
-    95% {
-        opacity: 0.6;
+    /* 50% {
+        opacity: 1;
+        transform: scale(1);
+    } */
+
+    100% {
+        opacity: 0.9;
+        transform: scale(1.5);
     }
 }
+
+/* Rest of your CSS remains exactly the same... */
+
 
 .bg-circles {
     position: fixed;
